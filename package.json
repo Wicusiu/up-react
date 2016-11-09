@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "postinstall": "typings install",
+    "postinstall": "npm install typings",
     "build:webpack": "NODE_ENV=production webpack --config config/webpack.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "clean": "",
@@ -17,6 +17,7 @@
     "jest": "^16.0.2",
     "jest-cli": "^16.0.2",
     "react-addons-test-utils": "^15.3.2",
+    "redux-devtools": "^3.3.1",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.9.5",
@@ -27,9 +28,15 @@
     "webpack-hot-middleware": "^2.6.4"
   },
   "dependencies": {
+    "@types/react": "^0.14.43",
+    "@types/react-redux": "^4.4.32",
+    "@types/redux-thunk": "^2.1.31",
     "bootstrap": "^3.3.7",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0"
   },
   "jest": {
     "cache": "--no-cache"

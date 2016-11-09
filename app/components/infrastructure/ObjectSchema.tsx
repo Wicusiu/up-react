@@ -10,6 +10,7 @@ export interface ObjectSchema {
    */
   id?: string;
   title?: string;
+  icon?:string;
   description?: string;
   'default'?: any;
 

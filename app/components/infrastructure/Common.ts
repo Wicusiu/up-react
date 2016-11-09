@@ -1,15 +1,19 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import  {ObjectSchema } from  './objectschema'
+import * as Redux from 'redux'; 
+
+import  {ObjectSchema} from  './objectschema'
 
 import {UpOVStringComponent} from '../components/string'
 import {UpOVObjectComponent} from '../components/object'
 
 export interface UpObjectViewerProps
 {
+  keyName?:string;
   object : any;
   objectSchema : ObjectSchema;
+  listener? : EventListener
 }
 
 const TypeToComponent : {[key : string] : React.ComponentClass<any>} = {
