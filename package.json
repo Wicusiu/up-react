@@ -1,0 +1,37 @@
+{
+  "name": "UpUpUp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "typings install",
+    "build:webpack": "NODE_ENV=production webpack --config config/webpack.prod.js",
+    "build": "npm run clean && npm run build:webpack",
+    "clean": "",
+    "start": "node dev_server.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "express": "^4.13.4",
+    "file-loader": "^0.9.0",
+    "jest": "^16.0.2",
+    "jest-cli": "^16.0.2",
+    "react-addons-test-utils": "^15.3.2",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.0.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.6.4"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "jest": {
+    "cache": "--no-cache"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {},
+  "globalDependencies": {
+    "jest": "registry:dt/jest#15.1.1+20160919141445",
+    "react": "registry:dt/react#0.14.0+20161008064207",
+    "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  }
+}
