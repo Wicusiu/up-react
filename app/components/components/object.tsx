@@ -8,7 +8,7 @@ import  * as Common from  '../infrastructure/common';
 import  {ObjectSchema } from  '../infrastructure/objectschema';
 import  { UpObjectViewer } from  '../UpObjectViewer';
 import  { UpLog } from  '../UpLog';
-import  * as Actions from  '../actions/main';
+import  * as Actions from  '../actions/actions';
 
 export class UpOVObjectComponent extends React.Component<Common.UpObjectViewerProps,{}>
 {

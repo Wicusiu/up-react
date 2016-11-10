@@ -1,41 +1,42 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
  
-import { createStore, applyMiddleware, combineReducers } from 'redux'; 
+import { createStore, applyMiddleware, combineReducers } from "redux"; 
 
-import { Provider } from 'react-redux'; 
+import { Provider } from "react-redux"; 
 
-import { UpObjectViewer } from './components/upobjectviewer';
-import { UpLog } from './components/UpLog';
-import thunk from 'redux-thunk';
-import * as Actions from './components/actions/Main';
+import { UpObjectViewer } from "./components/upobjectviewer";
+import { UpLog } from "./components/UpLog";
+import thunk from "redux-thunk";
+import * as Actions from "./components/actions/actions";
 
 const initialState = {} ;
 
 // The Reducer Function
-var userReducer = function(state = {}, action: Actions.Action) {
-  var _state = state ;
+const userReducer = function(state:any, action: Actions.Action) {
+  var finalState = state ;
 	switch(action.type) {
- 		case Actions.UPDATE :
-		  var _update = {} ;
-			_update[action.keyName] =  action.value ;
-			_state = Object.assign({}, state, _update);
+		case Actions.UPDATE :
+		  var update = {} ;
+			update[action.keyName] =  action.value ;
+			finalState = Object.assign({}, state, update);
 			break ;
 	}
 
-  return _state;
-}
+  return finalState;
+};
 
-var appStore = createStore(userReducer, initialState);
+const appStore = createStore(userReducer, initialState);
 
-class Main extends React.Component<{}, {}> {
+export class App extends React.Component<{}, {}> {
+	
 	public constructor(props) {
 		super(props);
 		this.state = this.getInitialState() ;
 	}
 
 	public getInitialState(): any {
-		return {firstName : 'first', lastName : 'last'} ;
+		return {firstName : "first", lastName : "last"} ;
 	}
 
   public render(): React.ReactElement<{}> {
@@ -66,10 +67,9 @@ class Main extends React.Component<{}, {}> {
 			</div>
 		 </div>);
   }
-}
-ReactDOM.render(<div>
+};
+ReactDOM.render(
 	 	<Provider store={appStore}>
-			<Main>            
-			</Main>
-		</Provider>
-</div>, document.getElementById('app'));
+			<App>            
+			</App>
+		</Provider>, document.getElementById("app"));

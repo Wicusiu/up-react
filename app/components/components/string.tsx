@@ -9,7 +9,7 @@ import  {UpLabel } from  '../uplabel';
 import  {UpFormGroup } from  '../UpFormGroup';
 
 import  * as Common from  '../infrastructure/common';
-import  * as Actions from  '../actions/main';
+import  * as Actions from  '../actions/actions';
 import  {ObjectSchema } from  '../infrastructure/objectschema';
 
 export class UpOVStringComponent extends React.Component<Common.UpObjectViewerProps,{}>

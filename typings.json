@@ -1,8 +1,11 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "react-redux": "registry:npm/react-redux#4.4.0+20160614222153",
+    "redux-thunk": "registry:npm/redux-thunk#2.0.0+20160525185520"
+  },
   "globalDependencies": {
     "jest": "registry:dt/jest#15.1.1+20160919141445",
-    "react": "registry:dt/react#0.14.0+20161008064207",
+    "react": "registry:dt/react#0.14.0+20161024223416",
     "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
   }
